@@ -1,0 +1,17 @@
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\FileServer.deps.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\FileServer.runtimeconfig.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\FileServer.runtimeconfig.dev.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\FileServer.dll
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\FileServer.pdb
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.csproj.CoreCompileInputs.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.RazorAssemblyInfo.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.RazorAssemblyInfo.cs
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.AssemblyInfoInputs.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.AssemblyInfo.cs
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.RazorTargetAssemblyInfo.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.dll
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.pdb
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.dll
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.pdb
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.csprojAssemblyReference.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\FileServer\obj\Debug\netcoreapp2.1\FileServer.csproj.CopyComplete

@@ -1,0 +1,11 @@
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\bin\Debug\netcoreapp2.1\ImageServer.deps.json
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\bin\Debug\netcoreapp2.1\ImageServer.runtimeconfig.json
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\bin\Debug\netcoreapp2.1\ImageServer.runtimeconfig.dev.json
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\bin\Debug\netcoreapp2.1\ImageServer.dll
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.csprojAssemblyReference.cache
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.csproj.CoreCompileInputs.cache
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.RazorAssemblyInfo.cache
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.RazorAssemblyInfo.cs
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.AssemblyInfoInputs.cache
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.AssemblyInfo.cs
+C:\Develop\OneDrive.Projects\Jin.ImageServer\ImageServer\obj\Debug\netcoreapp2.1\ImageServer.RazorTargetAssemblyInfo.cache
