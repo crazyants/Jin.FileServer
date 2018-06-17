@@ -2,10 +2,12 @@ JinFileServer，可以让你在只保存一张原图的情况下，
 无侵入的给现有.net core项目添加动态生成图片功能，可以生成任意大小哦。
 
 ## 1. 使用方法
-#### 1.1 配置
+#### 1.1 安装
+    nuget 搜索 Jin.FileServer安装。
+#### 1.2 配置
     app.UseJinFileServer(env);
 就是这么简单，一行代码搞定。
-#### 1.2 体验一把
+#### 1.3 体验一把
     保证项目wwwroot文件夹中有一张图片。
     假设图片地址是：
     https://localhost:44370/upload/201806/1.png

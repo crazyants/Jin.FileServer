@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Description>JinFileServer，可以让你在只保存一张原图的情况下，
 无侵入的给现有.net core项目添加动态生成图片功能，可以生成任意大小哦。</Description>
+    <PackageProjectUrl>https://github.com/jinchou/Jin.FileServer</PackageProjectUrl>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
