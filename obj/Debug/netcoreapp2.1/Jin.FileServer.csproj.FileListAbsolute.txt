@@ -1,0 +1,11 @@
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.deps.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.dll
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.pdb
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.csproj.CoreCompileInputs.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.AssemblyInfoInputs.cache
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.AssemblyInfo.cs
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.dll
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.pdb
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.runtimeconfig.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.runtimeconfig.dev.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.csprojAssemblyReference.cache
