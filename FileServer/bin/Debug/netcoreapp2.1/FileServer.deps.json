@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v2.1": {
       "FileServer/1.0.0": {
         "dependencies": {
-          "Jin.FileServer": "1.0.0",
+          "Jin.FileServer": "1.1.0",
           "Microsoft.AspNetCore.App": "2.1.0",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "Microsoft.NETCore.App": "2.1.0",
@@ -1514,7 +1514,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Jin.FileServer/1.0.0": {
+      "Jin.FileServer/1.1.0": {
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.1.0",
           "SixLabors.ImageSharp": "1.0.0-beta0004"
@@ -4948,7 +4948,7 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
-    "Jin.FileServer/1.0.0": {
+    "Jin.FileServer/1.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

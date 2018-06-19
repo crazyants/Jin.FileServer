@@ -5634,7 +5634,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Jin.FileServer/1.1.0": {
+      "Jin.FileServer/1.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -14260,7 +14260,7 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Jin.FileServer/1.1.0": {
+    "Jin.FileServer/1.1.1": {
       "type": "project",
       "path": "../Jin.FileServer/Jin.FileServer.csproj",
       "msbuildProject": "../Jin.FileServer/Jin.FileServer.csproj"
@@ -14268,7 +14268,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Jin.FileServer >= 1.1.0",
+      "Jin.FileServer >= 1.1.1",
       "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
       "Microsoft.NETCore.App >= 2.1.0",

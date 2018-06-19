@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using Jin.FileServer;
+﻿using Jin.FileServer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace FileServer
@@ -57,20 +54,7 @@ namespace FileServer
             }
 
             //启用文件服务器
-            app.UseJinFileServer(env, opt =>
-            {
-                //opt.ImageFormats= new List<string> { ".bmp", ".gif", ".jpg", ".jpeg", ".png" };
-                //opt.ImageSizes = new List<Size>
-                //{
-                //    new Size(80, 80),
-                //    new Size(100, 100),
-                //    new Size(200, 200),
-                //    new Size(480, 480),
-                //    new Size(500, 500),
-                //    new Size(600, 600),
-                //    new Size(800, 800),
-                //};
-            });
+            app.UseJinFileServer(env);
 
             app.UseStaticFiles();
             app.UseHttpsRedirection();

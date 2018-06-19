@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Jin.FileServer</id>
+    <version>1.1.1</version>
+    <authors>Jin.FileServer</authors>
+    <owners>Jin.FileServer</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/jinchou/Jin.FileServer</projectUrl>
+    <description>JinFileServer，可以让你在只保存一张原图的情况下，
+无侵入的给现有.net core项目添加动态生成图片功能，可以生成任意大小哦。</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Microsoft.AspNetCore.All" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="SixLabors.ImageSharp" version="1.0.0-beta0004" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.runtimeconfig.json" target="lib\netcoreapp2.1\Jin.FileServer.runtimeconfig.json" />
+    <file src="C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.dll" target="lib\netcoreapp2.1\Jin.FileServer.dll" />
+  </files>
+</package>

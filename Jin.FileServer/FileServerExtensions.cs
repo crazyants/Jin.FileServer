@@ -12,6 +12,14 @@ namespace Jin.FileServer
         /// <summary>
         /// 启用静态文件服务器中间件
         /// </summary>
+        public static IApplicationBuilder UseJinFileServer(this IApplicationBuilder app, IHostingEnvironment env)
+        {
+            return app.UseJinFileServer(env, opt => { });
+        }
+
+        /// <summary>
+        /// 启用静态文件服务器中间件，并使用指定配置选项
+        /// </summary>
         public static IApplicationBuilder UseJinFileServer(this IApplicationBuilder app, IHostingEnvironment env, Action<JinFileServerOptions> action)
         {
             return app.UseMiddleware<FileServerMiddleware>(env, action);
