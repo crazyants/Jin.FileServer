@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Jin.FileServer/1.1.1": {
+      "Jin.FileServer/2.0.1": {
         "dependencies": {
           "Microsoft.NETCore.App": "2.1.0",
           "SixLabors.ImageSharp": "1.0.0-beta0004"
@@ -63,7 +63,7 @@
     }
   },
   "libraries": {
-    "Jin.FileServer/1.1.1": {
+    "Jin.FileServer/2.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

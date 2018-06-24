@@ -1,7 +1,9 @@
-﻿using Jin.FileServer;
+﻿using FileServer.Application.AppServices.Glo;
+using FileServer.Configs;
+using FileServer.Middlewares;
+using Jin.FileServer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -20,8 +22,12 @@ namespace FileServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
 
+            //[无依赖]文件服务器配置信息
+            services.Configure<FileServerSettings>(Configuration.GetSection(nameof(FileServerSettings)));
+
+            services.AddTransient<FileAppService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -38,7 +44,6 @@ namespace FileServer
                     }
                 });
             });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +58,10 @@ namespace FileServer
                 app.UseHsts();
             }
 
-            //启用文件服务器
+            //3.启用异常处理中间件
+            app.UseMiddleware<ExceptionMiddleware>();
+
+            //4.启用文件服务器
             app.UseJinFileServer(env);
 
             app.UseStaticFiles();

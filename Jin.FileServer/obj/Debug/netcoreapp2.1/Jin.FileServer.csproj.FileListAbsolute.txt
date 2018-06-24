@@ -8,3 +8,4 @@ C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2
 C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.pdb
 C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.runtimeconfig.json
 C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\bin\Debug\netcoreapp2.1\Jin.FileServer.runtimeconfig.dev.json
+C:\Develop\OneDrive.Projects\Jin.FileServer\Jin.FileServer\obj\Debug\netcoreapp2.1\Jin.FileServer.csprojAssemblyReference.cache

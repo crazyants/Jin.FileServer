@@ -41,6 +41,18 @@ namespace Jin.FileServer
                 await _next(context);
                 return;
             }
+            //请求图片，验证防盗链
+            var referer = context.Request.Headers[HeaderNames.Referer].ToString();
+            //从外部网页内部嵌入图片，进行验证
+            if (!_jinFileServerOptions.IsRefererAllowed(referer, context.Request.Host.Host))
+            {
+                var unauthorizedImage = _env.WebRootFileProvider.GetFileInfo(_jinFileServerOptions.UnauthorizedImage);
+                if (unauthorizedImage.Exists)
+                    await context.Response.SendFileAsync(unauthorizedImage);
+                else
+                    await _next(context);
+                return;
+            }
 
             var destPath = context.Request.Path.Value;
 
@@ -52,14 +64,18 @@ namespace Jin.FileServer
                 return;
             }
 
-            //不希望调整图片，进入下一个中间件
-            if (destPath.IndexOf('_') == -1)
+            var destFileName = Path.GetFileName(destPath);
+
+            //不希望调整图片，进入下一个中间件 //希望调整图片的参数重复，进入下一个中间件
+            if (destFileName.IndexOf('_') == -1 ||
+                destFileName.IndexOf('_') != destFileName.LastIndexOf('_'))
             {
                 await _next(context);
                 return;
             }
+            
 
-            var prefix = destPath.Substring(0, destPath.IndexOf('_'));
+            var prefix = destFileName.Substring(0, destFileName.IndexOf('_'));
             var srcImage = _env.WebRootFileProvider.GetFileInfo(prefix);
             //原图不存在，进入下一个中间件
             if (!srcImage.Exists)
@@ -68,21 +84,10 @@ namespace Jin.FileServer
                 return;
             }
 
-            //原图存在，验证防盗链
-            var referer = context.Request.Headers[HeaderNames.Referer].ToString();
-            if (!_jinFileServerOptions.IsRefererAllowed(referer, context))
-            {
-                var unauthorizedImage = _env.WebRootFileProvider.GetFileInfo(_jinFileServerOptions.UnauthorizedImage);
-                if (unauthorizedImage.Exists)
-                    await context.Response.SendFileAsync(unauthorizedImage);
-                else
-                    await _next(context);
-                return;
-            }
-
-            var affix = destPath.Substring(destPath.IndexOf('_') + 1);
+            var affix = destFileName.Substring(destFileName.IndexOf('_') + 1);
             //原图存在，生成目标图片，再输出
             var fileSize = affix.Substring(0, affix.IndexOf('.'));
+            var fileExt = Path.GetExtension(affix);
 
             //调整图片大小
             //调整原则：【保证图片不变形！！！】
@@ -129,7 +134,7 @@ namespace Jin.FileServer
                     }
                 }
 
-                ResizeWithoutDistortion(image, size);
+                ResizeWithoutDistortion(image, size, fileExt == ".png");
                 //保存调整后的图片
                 image.Save(_env.WebRootPath + destPath);
             }
@@ -140,7 +145,7 @@ namespace Jin.FileServer
         /// <summary>
         /// 无失真调整大小
         /// </summary>
-        public void ResizeWithoutDistortion(Image<Rgba32> srcImage, Size destSize)
+        public void ResizeWithoutDistortion(Image<Rgba32> srcImage, Size destSize, bool isPng)
         {
             var srcRadio = srcImage.Width * 1.0m / srcImage.Height;
             var destRadio = destSize.Width * 1.0m / destSize.Height;
@@ -163,7 +168,10 @@ namespace Jin.FileServer
             //调整到不失真大小
             srcImage.Mutate(x => x.Resize(undistortedSize));
             //填充到目的宽高
-            srcImage.Mutate(x => x.Pad(destSize.Width, destSize.Height).BackgroundColor(_jinFileServerOptions.BackgroundColor));
+            srcImage.Mutate(x => x
+                .Pad(destSize.Width, destSize.Height)
+                .BackgroundColor(isPng ? _jinFileServerOptions.PngBackgroundColor : _jinFileServerOptions.BackgroundColor)
+            );
         }
     }
 }

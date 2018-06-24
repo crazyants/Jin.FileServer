@@ -3,6 +3,15 @@
 JinFileServer，可以让你在只保存一张原图的情况下，并且保证原图不失真的情况下，
 无侵入的给现有.net core项目添加动态生成图片功能，并支持防盗链。
 
+## 版本更新记录
+#### v2.0.2
+    添加png图片背景色设置，以默认支持透明背景
+#### v2.0.1 
+    更新防盗链验证规则
+#### v2.0. 
+    图片防盗链功能上线
+#### v1.0
+    图片文件服务器第一版上线！
 ## 1. 使用方法
 #### 1.1 安装
     Install-Package Jin.FileServer
@@ -62,13 +71,3 @@ JinFileServer，可以让你在只保存一张原图的情况下，并且保证�
 2. 支持防盗链
 3. 支持一般文件，支持图片
 4. 支持设定某些尺寸可以设置为自动调整
-
-## Upgrade history
-#### v2.0.2
-    Add settings support for png background color ,and is able to set transparent background color.
-#### v2.0.1 
-    更新防盗链验证规则
-#### v2.0. 
-    图片防盗链功能上线
-#### v1.0
-    图片文件服务器第一版上线！

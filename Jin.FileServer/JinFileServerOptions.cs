@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Http;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.Primitives;
 
@@ -35,15 +35,19 @@ namespace Jin.FileServer
         public string UnauthorizedImage { get; set; } = "/upload/unauthorized.jpg";
 
         /// <summary>
-        /// 空表示空的来源，.表示允许当前主机名
+        /// .表示允许当前主机名
         /// </summary>
-        public List<string> AllowedDomains { get; set; } = new List<string> { "", "." };
+        public List<string> AllowedDomains { get; set; } = new List<string> { "." };
 
         /// <summary>
         /// 为了不失真填充图片时，使用的背景色
         /// </summary>
         public Rgba32 BackgroundColor { get; set; } = Rgba32.White;
 
+        /// <summary>
+        /// .png 图片背景色（默认Transparent）
+        /// </summary>
+        public Rgba32 PngBackgroundColor { get; set; } = Rgba32.Transparent;
 
         /// <summary>
         /// 判断指定大小的图片是否满足要求
@@ -58,15 +62,18 @@ namespace Jin.FileServer
         /// <summary>
         /// 判断请求来源是否被允许
         /// </summary>
-        public bool IsRefererAllowed(string referer, HttpContext context)
+        public bool IsRefererAllowed(string referer, string currentHost)
         {
+            if (string.IsNullOrEmpty(referer))
+                return true;
+            var refererUri = new Uri(referer);
             var self = AllowedDomains.FirstOrDefault(n => n == ".");
             if (self != null)
             {
                 AllowedDomains.RemoveAll(n => n == ".");
-                AllowedDomains.Insert(0, context.Request.Host.Value);
+                AllowedDomains.Insert(0, currentHost);
             }
-            return AllowedDomains.Exists(n => n == referer);
+            return AllowedDomains.Exists(n => n == refererUri.Host);
         }
 
     }
